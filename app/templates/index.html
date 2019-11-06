@@ -1,0 +1,16 @@
+<html>
+<title>Product calculator</title>
+<body>
+    <h1>Product calculator</h1>
+    <form action="" method="post">
+        {{ form.quantity }}
+        {{ form.price }}
+        {{ form.state }}
+        {{ form.submit }}
+        {{ form.csrf_token }}
+    </form>
+    {% if res != None %}
+    {{ res }}
+    {% endif %}
+</body>
+</html>
