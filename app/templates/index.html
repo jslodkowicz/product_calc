@@ -1,16 +1,25 @@
-<html>
-<title>Product calculator</title>
-<body>
-    <h1>Product calculator</h1>
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Product calculator
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h3>Product calculator</h3><br>
     <form action="" method="post">
-        {{ form.quantity }}
-        {{ form.price }}
-        {{ form.state }}
-        {{ form.submit }}
-        {{ form.csrf_token }}
+        <div class="col-xs-2">
+        <dl>
+            {{ wtf.quick_form(form) }}
+            {{ form.csrf_token }}
+        </dl>
+        </div>
     </form>
+</div>
+<div class="container">
     {% if res != None %}
     {{ res }}
     {% endif %}
-</body>
-</html>
+</div>
+{% endblock %}
