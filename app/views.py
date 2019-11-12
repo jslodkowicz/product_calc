@@ -5,7 +5,7 @@ from app.forms import CalcForm
 from app.product_mvp import price_calc
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route("/", methods=["GET", "POST"])
 def index():
     form = CalcForm()
     if request.method == "POST" and form.validate():
