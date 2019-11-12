@@ -6,4 +6,4 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config.from_object(Config)
 
-from app import routes, forms
+from app import views, forms
