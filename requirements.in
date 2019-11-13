@@ -1,0 +1,7 @@
+Flask
+Flask-Bootstrap
+Flask-WTF
+pytest
+black
+pre-commit
+virtualenv
